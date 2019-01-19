@@ -15,12 +15,14 @@ class User(Base):
     id = Column(Integer, primary_key=True)
     username = Column(String)
     password = Column(String)
+    balance = Column(Integer)
 
 #----------------------------------------------------------------------
     def __init__(self, username, password):
         """"""
         self.username = username
         self.password = password
+        self.balance = 0
 
 # create tables
 Base.metadata.create_all(engine)
