@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+{% block body %}
+{% if session['logged_in'] %}
+
+<form action="/login" method="POST">
+<div class="login">
+<div class="login-screen">
+<div class="app-title">
+<h1>Ride Details</h1>
+</div>
+<div class="login-form">
+<div class="control-group">
+  <input type="text" class="login-field" value="" placeholder="Destination" name="">
+<label class="login-field-icon fui-user" for="login-name"></label></div>
+<div class="control-group">
+  <input type="text" class="login-field" value="" placeholder="From" name="From">
+<label class="login-field-icon fui-lock" for="login-pass"></label></div>
+<div class="control-group">
+  <input type="text" class="login-field" value="" placeholder="Price in USD" name="Price in USD">
+<label class="login-field-icon fui-lock" for="login-pass"></label></div>
+<div class="control-group">
+  <input type="text" class="login-field" value="" placeholder="Date" name="Date">
+<label class="login-field-icon fui-lock" for="login-pass"></label></div>
+<div class="control-group">
+  <input type="text" class="login-field" value="" placeholder="Departure Time" name="Departure Time">
+<label class="login-field-icon fui-lock" for="login-pass"></label></div>
+<div class="control-group">
+  <input type="text" class="login-field" value="" placeholder="Seats Available" name="Seats Available">
+<label class="login-field-icon fui-lock" for="login-pass"></label></div>
+<input type="submit" value="Submit" class="btn btn-primary btn-large btn-block">
+
+</div>
+</div>
+</div>
+</form>{% endif %}
+{% endblock %}

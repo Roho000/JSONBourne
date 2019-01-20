@@ -12,7 +12,7 @@ def home():
     if not session.get('logged_in'):
         return render_template('login.html')
     else:
-        return render_template('login.html')
+        return render_template('ridesetup.html')
 
 
 @app.route('/login', methods=['POST'])
