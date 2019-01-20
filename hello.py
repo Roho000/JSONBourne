@@ -12,6 +12,17 @@ def home():
     if not session.get('logged_in'):
         return render_template('login.html')
     else:
+        session['logged_out'] = False
+        return doChoice()
+
+@app.route('/choice', methods=['POST'])
+def doChoice():
+    render_template('choice.html')
+    need = request.form
+
+    if need:
+        return render_template('choice.html')
+    else:
         return render_template('ridesetup.html')
 
 

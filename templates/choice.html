@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+{% block body %}
+{% if session['logged_in'] %}
+
+<form action="/choice" method="POST">
+<div class="login">
+<div class="login-screen">
+<div class="app-title">
+<h1>Ride Details</h1>
+</div>
+
+<input type="radio" value="Need a Ride?" name="need" class="btn btn-primary btn-large btn-block">
+<input type="radio" value="Give a Ride?" name="give" class="btn btn-primary btn-large btn-block">
+<input type="submit" value="Log in" class="btn btn-primary btn-large btn-block">
+
+</div>
+</div>
+</div>
+</form>{% endif %}
+{% endblock %}
