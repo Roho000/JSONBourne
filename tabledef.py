@@ -24,5 +24,17 @@ class User(Base):
         self.password = password
         self.balance = 0
 
+class Ride(Base):
+    __tablename__ = "rides"
+
+    id = Column(Integer, primary_key=True)
+    depart = Column(String)
+    destination = Column(String)
+    date = Column(Date)
+    price = Column(Integer)
+    seats = Column(Integer)
+    maxSeats = Column(Integer)
+    driverRef = Column(Integer, ForeignKey('users.id'))
+
 # create tables
 Base.metadata.create_all(engine)
