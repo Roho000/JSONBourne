@@ -38,6 +38,7 @@ def do_admin_login():
     result = query.first()
     if result:
         session['logged_in'] = True
+        session['user_balance'] = result.balance
     else:
         flash('wrong password!')
     return home()
