@@ -15,7 +15,7 @@ session.add(user)
 user = User("python","python")
 session.add(user)
 
-user = User("jumpiness","python")
+user = User("swamp", "hacks")
 session.add(user)
 # commit the record the database
 session.commit()
